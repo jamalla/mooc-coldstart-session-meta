@@ -1,0 +1,15 @@
+project:
+  name: mooc-coldstart-session-meta
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  runs: runs
+
+repro:
+  seed: 42
+  deterministic: true
+
+training:
+  num_workers: 2
+  pin_memory: false
