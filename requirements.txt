@@ -22,3 +22,6 @@ matplotlib
 
 # Utilities
 rich
+ijson
+pyarrow
+duckdb
