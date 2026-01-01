@@ -1,0 +1,23 @@
+{
+  "artifacts": {
+    "source_session_sequences": {
+      "run_tag": "20251229_232834",
+      "root": "C:\\mooc-coldstart-session-meta\\data\\processed\\session_sequences\\source_sessions_20251229_232834",
+      "train": "C:\\mooc-coldstart-session-meta\\data\\processed\\session_sequences\\source_sessions_20251229_232834\\train",
+      "val": "C:\\mooc-coldstart-session-meta\\data\\processed\\session_sequences\\source_sessions_20251229_232834\\val",
+      "test": "C:\\mooc-coldstart-session-meta\\data\\processed\\session_sequences\\source_sessions_20251229_232834\\test",
+      "vocab_json": "C:\\mooc-coldstart-session-meta\\data\\processed\\session_sequences\\source_sessions_20251229_232834\\source_vocab_items_20251229_232834.json"
+    },
+    "dataloader_config": {
+      "run_tag_target": "20251229_163357",
+      "run_tag_source": "20251229_232834",
+      "path": "C:\\mooc-coldstart-session-meta\\data\\processed\\supervised\\dataloader_config_20251229_163357_20251229_232834.json"
+    },
+    "sanity_metrics": {
+      "run_tag_target": "20251229_163357",
+      "run_tag_source": "20251229_232834",
+      "path": "C:\\mooc-coldstart-session-meta\\data\\processed\\supervised\\sanity_metrics_20251229_163357_20251229_232834.json"
+    }
+  },
+  "updated_at": "2026-01-02 07:18:50"
+}
