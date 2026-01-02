@@ -44,8 +44,17 @@
         "results_json": "C:\\mooc-coldstart-session-meta\\reports\\09_gru4rec_baseline\\20260102_231041\\results.json",
         "run_meta_json": "C:\\mooc-coldstart-session-meta\\reports\\09_gru4rec_baseline\\20260102_231041\\run_meta.json",
         "model_pt": "C:\\mooc-coldstart-session-meta\\reports\\09_gru4rec_baseline\\20260102_231041\\model.pt"
+      },
+      "20260102_232303": {
+        "target_run_tag": "20251229_163357",
+        "source_run_tag": "20251229_232834",
+        "report_dir": "C:\\mooc-coldstart-session-meta\\reports\\09_gru4rec_baseline\\20260102_232303",
+        "results_json": "C:\\mooc-coldstart-session-meta\\reports\\09_gru4rec_baseline\\20260102_232303\\results.json",
+        "run_meta_json": "C:\\mooc-coldstart-session-meta\\reports\\09_gru4rec_baseline\\20260102_232303\\run_meta.json",
+        "model_pt": "C:\\mooc-coldstart-session-meta\\reports\\09_gru4rec_baseline\\20260102_232303\\model.pt",
+        "notes": "Tuned: dropout=0.3, weight_decay=1e-5, early stopping on VAL HR@20"
       }
     }
   },
-  "updated_at": "2026-01-02 23:15:54"
+  "updated_at": "2026-01-02 23:24:15"
 }
