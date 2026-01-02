@@ -17,7 +17,16 @@
       "run_tag_target": "20251229_163357",
       "run_tag_source": "20251229_232834",
       "path": "C:\\mooc-coldstart-session-meta\\data\\processed\\supervised\\sanity_metrics_20251229_163357_20251229_232834.json"
+    },
+    "mostpop_baseline": {
+      "20260102_133019": {
+        "target_run_tag": "20251229_163357",
+        "source_run_tag": "20251229_232834",
+        "report_dir": "C:\\mooc-coldstart-session-meta\\reports\\07_mostpop_baseline\\20260102_133019",
+        "results_json": "C:\\mooc-coldstart-session-meta\\reports\\07_mostpop_baseline\\20260102_133019\\results.json",
+        "run_meta_json": "C:\\mooc-coldstart-session-meta\\reports\\07_mostpop_baseline\\20260102_133019\\run_meta.json"
+      }
     }
   },
-  "updated_at": "2026-01-02 07:18:50"
+  "updated_at": "2026-01-02 13:58:49"
 }
