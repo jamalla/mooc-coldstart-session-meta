@@ -140,6 +140,16 @@
           "_n_examples": 200
         }
       }
+    },
+    {
+      "kind": "12A_task_builder_for_meta",
+      "run_tag": "20260104_141727",
+      "created_at": "2026-01-04T14:58:29",
+      "report_dir": "C:\\mooc-coldstart-session-meta\\reports\\12A_task_builder_for_meta\\20260104_141727",
+      "artifacts": {
+        "meta_task_config": "C:\\mooc-coldstart-session-meta\\reports\\12A_task_builder_for_meta\\20260104_141727\\meta_task_config.json",
+        "task_coverage": "C:\\mooc-coldstart-session-meta\\reports\\12A_task_builder_for_meta\\20260104_141727\\task_coverage.json"
+      }
     }
   ]
 }
