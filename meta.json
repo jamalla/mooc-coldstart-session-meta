@@ -83,5 +83,63 @@
       }
     }
   },
-  "updated_at": "2026-01-02 23:53:40"
+  "updated_at": "2026-01-02 23:53:40",
+  "runs": [
+    {
+      "notebook": "11A_transfer_pretrain_source.ipynb",
+      "run_tag": "20260103_220933",
+      "created_at": "2026-01-04T00:00:30",
+      "source_run_tag": "20251229_232834",
+      "model": "gru4rec",
+      "report_dir": "C:\\mooc-coldstart-session-meta\\reports\\11A_transfer_pretrain_source\\20260103_220933",
+      "checkpoint": "C:\\mooc-coldstart-session-meta\\reports\\11A_transfer_pretrain_source\\20260103_220933\\model_pretrained_source.pt",
+      "notes": "Source pretraining (streamed one-pair-per-session, capped steps/epoch). Encoder weights intended for transfer; embeddings/head are source-specific."
+    },
+    {
+      "run_tag": "20260104_114435",
+      "notebook": "11B_transfer_finetune_target.ipynb",
+      "created_at": "2026-01-04 11:50:16",
+      "artifacts": {
+        "report_dir": "C:\\mooc-coldstart-session-meta\\reports\\11B_transfer_finetune_target\\20260104_114435",
+        "model": "C:\\mooc-coldstart-session-meta\\reports\\11B_transfer_finetune_target\\20260104_114435\\model_transfer_finetuned_target.pt",
+        "val_metrics": "C:\\mooc-coldstart-session-meta\\reports\\11B_transfer_finetune_target\\20260104_114435\\metrics_target_val.json",
+        "test_metrics": "C:\\mooc-coldstart-session-meta\\reports\\11B_transfer_finetune_target\\20260104_114435\\metrics_target_test.json",
+        "cfg": "C:\\mooc-coldstart-session-meta\\reports\\11B_transfer_finetune_target\\20260104_114435\\finetune_cfg.json"
+      },
+      "inputs": {
+        "target_run_tag": "20251229_163357",
+        "source_pretrain_run_tag": "20260103_220933",
+        "source_checkpoint": "C:\\mooc-coldstart-session-meta\\reports\\11A_transfer_pretrain_source\\20260103_220933\\model_pretrained_source.pt",
+        "dataloader_config": "C:\\mooc-coldstart-session-meta\\data\\processed\\supervised\\dataloader_config_20251229_163357_20251229_232834.json",
+        "sanity_metrics": "C:\\mooc-coldstart-session-meta\\data\\processed\\supervised\\sanity_metrics_20251229_163357_20251229_232834.json",
+        "session_gap_thresholds": "C:\\mooc-coldstart-session-meta\\data\\processed\\normalized_events\\session_gap_thresholds.json"
+      },
+      "results": {
+        "target_val": {
+          "HR@5": 0.06878306878306878,
+          "MRR@5": 0.046296296296296294,
+          "NDCG@5": 0.0519760096232157,
+          "HR@10": 0.12698412698412698,
+          "MRR@10": 0.05337826488620139,
+          "NDCG@10": 0.07010594499394271,
+          "HR@20": 0.20105820105820105,
+          "MRR@20": 0.05799168906692618,
+          "NDCG@20": 0.08816282865768477,
+          "_n_examples": 189
+        },
+        "target_test": {
+          "HR@5": 0.09,
+          "MRR@5": 0.055,
+          "NDCG@5": 0.06377071188430579,
+          "HR@10": 0.15,
+          "MRR@10": 0.06272619047619048,
+          "NDCG@10": 0.0828935307213819,
+          "HR@20": 0.23,
+          "MRR@20": 0.06820425152333047,
+          "NDCG@20": 0.1030238813429633,
+          "_n_examples": 200
+        }
+      }
+    }
+  ]
 }
