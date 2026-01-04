@@ -83,7 +83,7 @@
       }
     }
   },
-  "updated_at": "2026-01-02 23:53:40",
+  "updated_at": "2026-01-05 01:40:01",
   "runs": [
     {
       "notebook": "11A_transfer_pretrain_source.ipynb",
@@ -150,6 +150,173 @@
         "meta_task_config": "C:\\mooc-coldstart-session-meta\\reports\\12A_task_builder_for_meta\\20260104_141727\\meta_task_config.json",
         "task_coverage": "C:\\mooc-coldstart-session-meta\\reports\\12A_task_builder_for_meta\\20260104_141727\\task_coverage.json"
       }
+    },
+    {
+      "kind": "12B_meta_train_on_source",
+      "run_tag": "20260104_165117",
+      "created_at": "2026-01-05T00:20:20",
+      "report_dir": "C:\\mooc-coldstart-session-meta\\reports\\12B_meta_train_on_source\\20260104_165117",
+      "artifacts": {
+        "report_json": "C:\\mooc-coldstart-session-meta\\reports\\12B_meta_train_on_source\\20260104_165117\\report.json",
+        "manifest_json": "C:\\mooc-coldstart-session-meta\\reports\\12B_meta_train_on_source\\20260104_165117\\manifest.json",
+        "meta_model_source_pt": "C:\\mooc-coldstart-session-meta\\reports\\12B_meta_train_on_source\\20260104_165117\\meta_model_source.pt"
+      },
+      "results": {
+        "best_step": 250,
+        "best_val_hr20": 0.018000000268220902,
+        "final_val_meta_adapt": {
+          "HR@5": 0.0010000000149011613,
+          "HR@10": 0.0030000000447034836,
+          "HR@20": 0.009500000141561032,
+          "MRR@5": 0.0002500000037252903,
+          "MRR@10": 0.00047500000335276126,
+          "MRR@20": 0.0009442519652657211,
+          "NDCG@5": 0.00043067656457424164,
+          "NDCG@10": 0.0010352062806487084,
+          "NDCG@20": 0.0027016825322061775,
+          "_n_episodes": 100
+        }
+      },
+      "updated_at": "2026-01-05 00:38:12"
+    },
+    {
+      "kind": "12C_meta_adapt_and_eval_on_target",
+      "run_tag": "20260105_013327",
+      "created_at": "2026-01-05 01:40:01",
+      "inputs": {
+        "source_12b_run_tag": "20260104_165117",
+        "ckpt_meta_init": "C:\\mooc-coldstart-session-meta\\reports\\12B_meta_train_on_source\\20260104_165117\\meta_model_source.pt",
+        "dataloader_config": "C:\\mooc-coldstart-session-meta\\data\\processed\\supervised\\dataloader_config_20251229_163357_20251229_232834.json",
+        "target_meta_json": "C:\\mooc-coldstart-session-meta\\data\\processed\\tensor_target\\target_tensor_metadata_20251229_163357.json"
+      },
+      "report_dir": "C:\\mooc-coldstart-session-meta\\reports\\12C_meta_adapt_and_eval_on_target\\20260105_013327",
+      "artifacts": {
+        "report_json": "C:\\mooc-coldstart-session-meta\\reports\\12C_meta_adapt_and_eval_on_target\\20260105_013327\\report.json",
+        "manifest_json": "C:\\mooc-coldstart-session-meta\\reports\\12C_meta_adapt_and_eval_on_target\\20260105_013327\\manifest.json"
+      },
+      "results": {
+        "target_val_meta_init": {
+          "raw": {
+            "HR@5": 0.010582010261714458,
+            "MRR@5": 0.00238095223903656,
+            "NDCG@5": 0.004325552377849817,
+            "HR@10": 0.042328041046857834,
+            "MRR@10": 0.006009070202708244,
+            "NDCG@10": 0.013970662839710712,
+            "HR@20": 0.05820105969905853,
+            "MRR@20": 0.0070551675744354725,
+            "NDCG@20": 0.017914893105626106,
+            "_n_examples": 189
+          },
+          "exclude_seen": {
+            "HR@5": 0.010582010261714458,
+            "MRR@5": 0.00238095223903656,
+            "NDCG@5": 0.004325552377849817,
+            "HR@10": 0.042328041046857834,
+            "MRR@10": 0.006009070202708244,
+            "NDCG@10": 0.013970662839710712,
+            "HR@20": 0.05820105969905853,
+            "MRR@20": 0.0070551675744354725,
+            "NDCG@20": 0.017914893105626106,
+            "_n_examples": 189
+          }
+        },
+        "target_test_meta_init": {
+          "raw": {
+            "HR@5": 0.014999999664723873,
+            "MRR@5": 0.003916666377335787,
+            "NDCG@5": 0.006587647367268801,
+            "HR@10": 0.03999999910593033,
+            "MRR@10": 0.006755952723324299,
+            "NDCG@10": 0.014167611487209797,
+            "HR@20": 0.05000000074505806,
+            "MRR@20": 0.0074851191602647305,
+            "NDCG@20": 0.016742054373025894,
+            "_n_examples": 200
+          },
+          "exclude_seen": {
+            "HR@5": 0.014999999664723873,
+            "MRR@5": 0.003916666377335787,
+            "NDCG@5": 0.006587647367268801,
+            "HR@10": 0.03999999910593033,
+            "MRR@10": 0.006755952723324299,
+            "NDCG@10": 0.014167611487209797,
+            "HR@20": 0.05000000074505806,
+            "MRR@20": 0.0074851191602647305,
+            "NDCG@20": 0.016742054373025894,
+            "_n_examples": 200
+          }
+        },
+        "target_val_meta_adapt": {
+          "raw": {
+            "HR@5": 0.009687500074505806,
+            "MRR@5": 0.002218750072643161,
+            "NDCG@5": 0.003994144964963198,
+            "HR@10": 0.04062499850988388,
+            "MRR@10": 0.005846230313181877,
+            "NDCG@10": 0.01348692923784256,
+            "HR@20": 0.054375000298023224,
+            "MRR@20": 0.006773007567971945,
+            "NDCG@20": 0.016929471865296364,
+            "_n_episodes": 50,
+            "_support": 32,
+            "_query": 64,
+            "_inner_steps": 1,
+            "_inner_lr": 0.01
+          },
+          "exclude_seen": {
+            "HR@5": 0.009687500074505806,
+            "MRR@5": 0.002218750072643161,
+            "NDCG@5": 0.003994144964963198,
+            "HR@10": 0.04062499850988388,
+            "MRR@10": 0.005846230313181877,
+            "NDCG@10": 0.01348692923784256,
+            "HR@20": 0.054375000298023224,
+            "MRR@20": 0.006773007567971945,
+            "NDCG@20": 0.016929471865296364,
+            "_n_episodes": 50,
+            "_support": 32,
+            "_query": 64,
+            "_inner_steps": 1,
+            "_inner_lr": 0.01
+          }
+        },
+        "target_test_meta_adapt": {
+          "raw": {
+            "HR@5": 0.013671875,
+            "MRR@5": 0.0035677081905305386,
+            "NDCG@5": 0.006001399829983711,
+            "HR@10": 0.03882812336087227,
+            "MRR@10": 0.006467386614531279,
+            "NDCG@10": 0.013673219829797745,
+            "HR@20": 0.049531251192092896,
+            "MRR@20": 0.007250352296978235,
+            "NDCG@20": 0.01643192581832409,
+            "_n_episodes": 200,
+            "_support": 32,
+            "_query": 64,
+            "_inner_steps": 1,
+            "_inner_lr": 0.01
+          },
+          "exclude_seen": {
+            "HR@5": 0.013671875,
+            "MRR@5": 0.0035677081905305386,
+            "NDCG@5": 0.006001399829983711,
+            "HR@10": 0.03882812336087227,
+            "MRR@10": 0.006467386614531279,
+            "NDCG@10": 0.013673219829797745,
+            "HR@20": 0.049531251192092896,
+            "MRR@20": 0.007250352296978235,
+            "NDCG@20": 0.01643192581832409,
+            "_n_episodes": 200,
+            "_support": 32,
+            "_query": 64,
+            "_inner_steps": 1,
+            "_inner_lr": 0.01
+          }
+        }
+      },
+      "updated_at": "2026-01-05 01:40:01"
     }
   ]
 }
